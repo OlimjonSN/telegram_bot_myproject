@@ -21,12 +21,16 @@ def pc(update, context):
     bot.sendMessage(chat_id, text, reply_markup=reply_markup)
 
 def pcofice(update,context):
-    text='ram:2g \nvga:intelHdgraphic \nhdd:500\ncpu:intel celeron 1.80 Ghz'
-    text1='ram:4g \nvga:NVIDA GEFORCE GT720 1gb \nhdd:1TB\ncpu:intel core i3 1.80 Ghz'
+    text='ram:2g \nvga:intelHdgraphic \nhdd:500\ncpu:intel celeron 1\.80 Ghz'
+    text1='ram:4g \nvga:NVIDA GEFORCE GT720 1gb \nhdd:1TB\ncpu:intel core i3 2\.80 Ghz'
     of='https://image.shutterstock.com/image-photo/desctop-computer-on-wooden-desk-260nw-1170846982.jpg'
     of1='http://1.bp.blogspot.com/_zVkfb2MIt4A/Sw4AuwRlQGI/AAAAAAAAAgw/6WuEuJF2qUc/s1600/Lenovo+A58+Desktop+Computer.jpg'
+    o1=InputTextMessageContent(
+        message_text=f'[samsung]({of1}) {text1}',
+        parse_mode='MarkdownV2'
+    )
     o=InputTextMessageContent(
-        message_text=f'[avtech]({of1}) {text}',
+        message_text=f'[avtech]({of}) {text}',
         parse_mode='MarkdownV2'
     )
     result1=InlineQueryResultArticle(
@@ -37,13 +41,9 @@ def pcofice(update,context):
         hide_url=True,
         id=1
     )
-    o1=InputTextMessageContent(
-        message_text=f'[samsung]({of1}) {text1}',
-        parse_mode='MarkdownV2'
-    )
     result2=InlineQueryResultArticle(
         title='samsung',
-        input_message_content=o,
+        input_message_content=o1,
         thumb_url=of1,
         description='$350.99',
         hide_url=True,
