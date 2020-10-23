@@ -403,8 +403,8 @@ def idg(update,context):
     photo=update.message.photo[0]
     print(photo)
 
-updater = Updater('1116012218:AAHXOvZDGx3mUOBIaCD7B83r7v4eJevk8GQ')
-
+updater = Updater('token')
+#echoeecho_bot
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(MessageHandler(Filters.photo, idg))
 updater.dispatcher.add_handler(MessageHandler(Filters.text('🖥stol kompyuter🖥'), pc))
